@@ -1,9 +1,9 @@
-import { Title } from "./styled"
+import { Navbar } from "../../components/Navbar"
 
 export const Home = () => {
     return (
         <>
-            <Title>The First Fantastics</Title>
+            <Navbar/>
         </>
     )
 }
