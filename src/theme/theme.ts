@@ -2,7 +2,8 @@ export const theme = {
     colors: {
         primary: '#2080a4',
         secondary: '#3195ba',
-        background: '#f5f2ee',
+        background: '#ede8e2',
+        surface: '#f5f2ee',
         text: '#000103',
         alert: '#d44242',
         hover: '52caf6',
@@ -30,7 +31,7 @@ export const theme = {
         md: '1rem',      
         lg: '1.5rem',    
         xl: '2rem',      
-        '2xl': '3rem',   
+        xxl: '3rem',   
     },
 
     borderRadius: {
