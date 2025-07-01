@@ -56,12 +56,13 @@ export const TitleContainer = styled.div`
     }
 `;
 
-export const TitleLogo = styled.img`
+export const TitleLogo = styled.img<{ $isVisible?: boolean}>`
     width: 50px;
     height: 50px;
     margin: 0;
     padding: 0;   
     transition: all 0.5s ease;
+    opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
 
     @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {
         width: calc(50px * 0.8);
@@ -74,13 +75,13 @@ export const TitleLogo = styled.img`
     }
 `;
 
-export const TitleText = styled.img`
+export const TitleText = styled.img<{ $isVisible?: boolean }>`
     width: 192px;
     height: 32px;
     margin: 0;
     padding: 0;
-    opacity: 1;
-    visibility: visible;
+    opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
+    visibility: ${({ $isVisible }) => ($isVisible ? 'visible' : 'hidden')};
     transition: 
         opacity 0.5s ease, 
         visibility 0.5s ease, 
@@ -152,7 +153,6 @@ export const Button = styled.button`
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
     clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
-    font-style: italic;
     align-items: center;
     align-self: center;
     height: 80%;
@@ -177,6 +177,27 @@ export const Button = styled.button`
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         display: none;
     }
+`;
+
+export const ToggleButton = styled.button`
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: ${({ theme }) => theme.spacing.xs};
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.hover};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: none;
+  }
 `;
 
 export const MenuButton = styled.button`
