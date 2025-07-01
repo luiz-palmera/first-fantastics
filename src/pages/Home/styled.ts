@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
-
-export const Title = styled.h1`
+export const Container = styled.div`
     display: flex;
-    font-family: ${({ theme }) => theme.fonts.heading};
-    font-size: ${({ theme }) => theme.fontSizes.xxl};
-    color: ${({ theme }) => theme.colors.primary};
-    align-self: center;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-`
+    height: 100vh;
+    background-color: ${({ theme }) => theme.colors.background};
+`;
