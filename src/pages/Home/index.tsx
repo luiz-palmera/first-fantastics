@@ -13,10 +13,12 @@ import { Navbar } from "../../components/Navbar"
 import { Content, Grid } from "./styled"
 import { useContext, useState } from "react"
 import { ThemeContext } from "../../context/ThemeContext"
+import { useMediaQuery } from "../../hooks/useMediaQuery"
 
 export const Home = () => {
 
     const {mode} = useContext(ThemeContext);
+    const isMobile = useMediaQuery("(max-width: 768px)");
     const historyTitle = mode === "dark" ? historyTitleDark : historyTitleLight; 
     const historySubtitle = mode === "dark" ? historySubtitleDark : historySubtitleLight;
     const meetTitle = mode === "dark" ? meetTitleDark : meetTitleLight;
@@ -35,6 +37,7 @@ export const Home = () => {
                     subtitleImage={historySubtitle}
                     onMouseEnter={() => setHoveredCard('left')}
                     onMouseLeave={() => setHoveredCard(null)}
+                    variant={isMobile ? "horizontal" : "vertical"}
                 />
                 <Card 
                     area="top"
