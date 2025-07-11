@@ -11,9 +11,10 @@ import horizontalCardBackground from "../../assets/card-background-2.jpg"
 import { Card } from "../../components/Card"
 import { Navbar } from "../../components/Navbar"
 import { Content, Grid } from "./styled"
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { ThemeContext } from "../../context/ThemeContext"
 import { useMediaQuery } from "../../hooks/useMediaQuery"
+import { fetchCharacters } from "../../services/marvel"
 
 export const Home = () => {
 
@@ -25,6 +26,14 @@ export const Home = () => {
     const meetSubtitle = mode === "dark" ? meetSubtitleDark : meetSubtitleLight;
 
     const [hoveredCard, setHoveredCard] = useState<'left' | 'top' | 'bottom' | null>(null);
+
+    useEffect(() => {
+        const loadCharacters = async () => {
+            const characters = await fetchCharacters();
+            console.log(characters);
+        }
+        loadCharacters();
+    }, []);
 
     return (
         <Content>
