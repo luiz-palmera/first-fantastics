@@ -7,6 +7,8 @@ import { NavLink } from "../ui/NavLink"
 import { MenuIcon, Moon, Sun } from "lucide-react"
 import { useContext, useState } from "react"
 import { ThemeContext } from "../../context/themeContextValue"
+import { routes } from "../../routes"
+import { navigateTo } from "../../utils/navigation"
 
 export const Navbar = () => {
     const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -17,6 +19,15 @@ export const Navbar = () => {
 
     const handleImageLoad = () => {
         setImagesLoaded(true);
+    }
+
+    const handleCharactersClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+            return;
+        }
+
+        event.preventDefault();
+        navigateTo("/characters");
     }
 
     return(
@@ -36,11 +47,11 @@ export const Navbar = () => {
                 />
             </TitleContainer>
             <NavLinks>
-                <NavLink title="Home" link="/" />
-                <NavLink title="Storyboard" link="/" />
-                <NavLink title="Characters" link="/" />
+                {routes.map((route) => (
+                    <NavLink key={route.path} title={route.label} link={route.path} />
+                ))}
             </NavLinks>
-            <ButtonWrapper>
+            <ButtonWrapper href="/characters" onClick={handleCharactersClick}>
                 <Button>
                     MEET THE FAMILY
                 </Button>
