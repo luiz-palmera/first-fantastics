@@ -6,7 +6,7 @@ import textDark from "../../assets/dark-header.png"
 import { NavLink } from "../ui/NavLink"
 import { MenuIcon, Moon, Sun } from "lucide-react"
 import { useContext, useState } from "react"
-import { ThemeContext } from "../../context/ThemeContext"
+import { ThemeContext } from "../../context/themeContextValue"
 
 export const Navbar = () => {
     const [imagesLoaded, setImagesLoaded] = useState(false);

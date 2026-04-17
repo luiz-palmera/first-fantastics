@@ -10,7 +10,5 @@ A responsive web project that displays information about the Fantastic Four. Bui
 - 🧑‍🎨 styled-components
 - ⛑️ TypeScript
 - 📐 Figma (design reference)
-- 📡 Marvel Developer API (soon)
 
 ---
-
