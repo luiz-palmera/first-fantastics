@@ -1,25 +1,40 @@
-import { BorderLogo, CardContainer, CardImage, SubtitleImage, TitleContainer, TitleImage } from "./styled";
+import {
+  CardContainer,
+  CardImage,
+  SubtitleImage,
+  TitleContainer,
+  TitleImage,
+} from "./styled";
 
-
-interface CardInterface {
-    area: string;
-    titleImage?: string;
-    subtitleImage?: string;
-    cardImage?: string;
-    variant?: "vertical" | "horizontal";
-    onMouseEnter?: () => void;
-    onMouseLeave?: () => void;
+interface CardProps {
+  area: string;
+  titleImage: string;
+  subtitleImage: string;
+  cardImage: string;
+  variant?: "vertical" | "horizontal";
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
-export const Card = ({area, titleImage, subtitleImage, cardImage, onMouseEnter, onMouseLeave, variant}: CardInterface) => {
-    return(
-        <CardContainer area={area} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} variant={variant}>
-            {/* <BorderLogo src={'placeholder'} alt="Border Logo" /> */}
-            <TitleContainer variant={variant}>
-                <TitleImage src={titleImage} alt="Title" />
-                <SubtitleImage src={subtitleImage} alt="Subtitle" />
-            </TitleContainer>
-            <CardImage src={cardImage} alt="Card Image" />
-        </CardContainer>
-    )
-}
+export const Card = ({
+  area,
+  titleImage,
+  subtitleImage,
+  cardImage,
+  onMouseEnter,
+  onMouseLeave,
+  variant = "vertical",
+}: CardProps) => (
+  <CardContainer
+    $area={area}
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
+    $variant={variant}
+  >
+    <TitleContainer $variant={variant}>
+      <TitleImage src={titleImage} alt="Title" $variant={variant} />
+      <SubtitleImage src={subtitleImage} alt="Subtitle" $variant={variant} />
+    </TitleContainer>
+    <CardImage src={cardImage} alt="Card Image" />
+  </CardContainer>
+);
