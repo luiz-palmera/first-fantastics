@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-labelledby="title">
+  <title id="title">Mole Man portrait</title>
+  <rect width="320" height="240" fill="#5b6b3f"/>
+  <path d="M0 170h320v70H0z" fill="#2b3322"/>
+  <circle cx="160" cy="102" r="48" fill="#d0a989"/>
+  <path d="M104 88c24-38 90-38 112 0-36-12-72-12-112 0z" fill="#5d432d"/>
+  <path d="M118 100h84v28h-84z" fill="#111111"/>
+  <path d="M80 232c16-68 144-68 160 0z" fill="#7d6942"/>
+  <text x="160" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#f5f2ee">MM</text>
+</svg>

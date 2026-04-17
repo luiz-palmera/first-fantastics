@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-labelledby="title">
+  <title id="title">Red Ghost and his Super-Apes portrait</title>
+  <rect width="320" height="240" fill="#772d3a"/>
+  <path d="M36 210c18-58 92-68 124-28 36-44 112-28 126 28z" fill="#f5f2ee" opacity=".18"/>
+  <circle cx="160" cy="82" r="42" fill="#e0b094"/>
+  <path d="M112 76c14-38 82-44 100 2-34-12-68-12-100-2z" fill="#f0f2f0"/>
+  <path d="M94 226c14-72 118-74 132 0z" fill="#b93446"/>
+  <circle cx="84" cy="156" r="28" fill="#745742"/>
+  <circle cx="238" cy="156" r="28" fill="#745742"/>
+  <circle cx="160" cy="168" r="34" fill="#5c4638"/>
+  <path d="M126 116h68M142 140h36" stroke="#3b1f25" stroke-width="9" stroke-linecap="round"/>
+  <text x="160" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#ffffff">RG</text>
+</svg>

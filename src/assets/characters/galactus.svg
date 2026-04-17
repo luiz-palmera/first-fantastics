@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-labelledby="title">
+  <title id="title">Galactus portrait</title>
+  <rect width="320" height="240" fill="#2b2550"/>
+  <path d="M36 48l70 28V28h108v48l70-28-36 102H72z" fill="#7a4aa0"/>
+  <circle cx="160" cy="118" r="42" fill="#d7a78d"/>
+  <path d="M88 238c10-72 134-72 144 0z" fill="#7a4aa0"/>
+  <path d="M132 112h16M172 112h16M142 146h36" stroke="#2b2550" stroke-width="10" stroke-linecap="round"/>
+  <text x="160" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">GA</text>
+</svg>
